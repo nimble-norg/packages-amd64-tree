@@ -1,1 +1,1 @@
-BSD Ports-like makefiles for NimbleOslS
+BSD Ports-like makefiles for NimbleOS
