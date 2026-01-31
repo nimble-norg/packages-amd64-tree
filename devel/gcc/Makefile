@@ -1,4 +1,3 @@
-DPKGFLAGS = ""
 PKG = "gcc"
 GET = "wget"
 all: $(PKG)
@@ -17,7 +16,7 @@ download:
 	rm -rf gcc_15.2.0-1_amd64.deb.part.a*
 
 install: download
-	dpkg -i $(DPKGFLAGS) gcc_15.2.0-1_amd64.deb
+	dpkg -i gcc_15.2.0-1_amd64.deb
 
 source:
 	$(GET) http://ftp.gnu.org/gnu/gcc/gcc-15.2.0/gcc-15.2.0.tar.gz

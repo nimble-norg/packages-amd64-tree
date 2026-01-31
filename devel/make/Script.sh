@@ -7,7 +7,6 @@ set -e
 PATH="/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/sbin"
 GET="wget"
 PKG="make"
-DPKGFLAGS=""
 
 for arg in "$@"; do
     case "$arg" in
@@ -23,7 +22,7 @@ for arg in "$@"; do
             echo '     dpkg -i "$DPKGFLAGS" make_4.4-1_amd64.deb'
             echo 'fi'
             if [ -f "make_4.4-1_amd64.deb" ]; then
-                dpkg -i "$DPKGFLAGS" make_4.4-1_amd64.deb
+                dpkg -i make_4.4-1_amd64.deb
             else
                 "$0" download
                 dpkg -i "$DPKGFLAGS" make_4.4-1_amd64.deb

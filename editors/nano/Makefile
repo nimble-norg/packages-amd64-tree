@@ -1,4 +1,3 @@
-DPKGFLAGS = ""
 PKG = "nano"
 GET = "wget"
 all: $(PKG)
@@ -9,7 +8,7 @@ download:
 	$(GET) https://github.com/nimble-norg/packages-amd64/raw/refs/heads/main/editors/nano/nano_8.7-1_amd64.deb
 
 install: download
-	dpkg -i $(DPKGFLAGS) nano_8.7-1_amd64.deb
+	dpkg -i nano_8.7-1_amd64.deb
 
 source:
 	$(GET) http://ftp.gnu.org/gnu/nano/nano-8.7.tar.gz

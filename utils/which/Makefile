@@ -1,4 +1,3 @@
-DPKGFLAGS = ""
 PKG = "which"
 GET = "wget"
 all: $(PKG)
@@ -9,7 +8,7 @@ download:
 	$(GET) https://github.com/nimble-norg/packages-amd64/raw/refs/heads/main/utils/which/which_2.23-1_amd64.deb
 
 install: download
-	dpkg -i $(DPKGFLAGS) which_2.23-1_amd64.deb
+	dpkg -i which_2.23-1_amd64.deb
 
 source:
 	$(GET) http://ftp.gnu.org/gnu/which/which-2.23.tar.gz

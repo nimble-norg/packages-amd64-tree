@@ -1,4 +1,3 @@
-DPKGFLAGS = ""
 PKG = "busybox-static"
 GET = "wget"
 all: $(PKG)
@@ -9,7 +8,7 @@ download:
 	$(GET) https://github.com/nimble-norg/packages-amd64/raw/refs/heads/main/utils/busybox-static/busybox-static_1.37.0-1_amd64.deb
 
 install: download
-	dpkg -i $(DPKGFLAGS) busybox-static_1.37.0-1_amd64.deb
+	dpkg -i busybox-static_1.37.0-1_amd64.deb
 
 source:
 	$(GET) http://busybox.net/downloads/busybox-1.37.0.tar.bz2

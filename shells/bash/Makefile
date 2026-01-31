@@ -1,4 +1,3 @@
-DPKGFLAGS = ""
 PKG = "bash"
 GET = "wget"
 all: $(PKG)
@@ -9,7 +8,7 @@ download:
 	$(GET) https://github.com/nimble-norg/packages-amd64/raw/refs/heads/main/shells/bash/bash_5.3-1_amd64.deb
 
 install: download
-	dpkg -i $(DPKGFLAGS) bash_5.3-1_amd64.deb
+	dpkg -i bash_5.3-1_amd64.deb
 
 source:
 	$(GET) http://ftp.gnu.org/gnu/bash/bash-5.3.tar.gz

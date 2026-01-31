@@ -1,4 +1,3 @@
-DPKGFLAGS = ""
 PKG = "mksh"
 GET = "wget"
 all: $(PKG)
@@ -9,7 +8,7 @@ download:
 	$(GET) https://github.com/nimble-norg/packages-amd64/raw/refs/heads/main/shells/mksh/mksh_R59-1_amd64.deb
 
 install: download
-	dpkg -i $(DPKGFLAGS) mksh_R59-1_amd64.deb
+	dpkg -i mksh_R59-1_amd64.deb
 
 source:
 	$(GET) http://www.mirbsd.org/MirOS/dist/mir/mksh/mksh-R59c.tgz

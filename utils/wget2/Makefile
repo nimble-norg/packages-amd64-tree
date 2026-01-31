@@ -1,4 +1,3 @@
-DPKGFLAGS = ""
 PKG = "wget2"
 GET = "wget"
 all: $(PKG)
@@ -9,7 +8,7 @@ download:
 	$(GET) https://github.com/nimble-norg/packages-amd64/raw/refs/heads/main/utils/wget2/wget2_2.2.1-1_amd64.deb
 
 install: download
-	dpkg -i $(DPKGFLAGS) wget2_2.2.1-1_amd64.deb
+	dpkg -i wget2_2.2.1-1_amd64.deb
 
 source:
 	$(GET) http://ftp.gnu.org/gnu/wget/wget2-2.2.1.tar.gz
